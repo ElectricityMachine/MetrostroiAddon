@@ -102,7 +102,10 @@ end
 
 local function TeleEnd(args,ply)
 	if #args > 0 then
-		ply:SetPos(table.GetLastValue(Metrostroi.TrackEditor.Paths[tonumber(args[1])]))
+		local index = tonumber(args[1])
+		local tbl = Metrostroi.TrackEditor.Paths
+
+		ply:SetPos(tbl[index][#tbl[index]])
 	end
 end
 
@@ -118,7 +121,10 @@ end
 
 local function TeleEntEnd(args,ply)
 	if #args > 0 and IsValid(Train) then
-		Train:SetPos(table.GetLastValue(Metrostroi.TrackEditor.Paths[tonumber(args[1])]))
+		local index = tonumber(args[1])
+		local tbl = Metrostroi.TrackEditor.Paths
+
+		Train:SetPos(tbl[index][#tbl[index]])
 
 		if Train.Base == "gmod_subway_base" then
 			Metrostroi.RerailTrain(Train)

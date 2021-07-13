@@ -2525,7 +2525,7 @@ local ppMat = Material("pp/blurx")
 hook.Add( "HUDPaint", "metrostroi-draw-crosshair-tooltip", function()
     --if not drawCrosshair then return end
     if IsValid(LocalPlayer()) then
-        local scrX,scrY = surface.ScreenWidth(),surface.ScreenHeight()
+        local scrX,scrY = ScrW(),ScrH()
 
         if canDrawCrosshair then
             surface.DrawCircle(scrX/2,scrY/2,4.1,drawCrosshair and Color(255,0,0) or Color(255,255,150))

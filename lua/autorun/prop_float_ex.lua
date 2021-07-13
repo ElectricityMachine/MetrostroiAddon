@@ -22,7 +22,7 @@ function PANEL:Setup(vars)
 	ctrl.Slider:SetLockY(1) --( self:GetRow().Label )
 	ctrl.Scratch:SetParent(self:GetRow().Label)
 	ctrl.Scratch:SetZoom(vars.zoom or 0)
-	ctrl.Scratch:SetFloatValue(vars.fv or 1.5)
+	ctrl.Scratch:SetFloatValue(vars.fv or 1.5) -- TODO: Possible to change to SetValue?
 	ctrl.Scratch:SetDecimals(vars.dec or 2)
 
 	if vars.nodraw then

@@ -405,7 +405,7 @@ end
 
 local function OpenConfigWindow()
 	local Panel = vgui.Create("DFrame")
-	Panel:SetPos(surface.ScreenWidth()/5,surface.ScreenHeight()/3)
+	Panel:SetPos(ScrW()/5,ScrH()/3)
 	Panel:SetSize(250,250)
 	Panel:SetTitle("Metrostroi Debugger Config")
 	Panel:SetVisible(true)
